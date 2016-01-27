@@ -1,0 +1,20 @@
+function thischeck(name,age){
+    this.name = name;
+    this.age = age;
+    this.fullDetails = function() {
+        return name + " " + age;
+    }
+}
+
+var a = new thischeck('samar',20);
+a.fullDetails();
+var b = new thischeck('deep',26);
+b.fullDetails();
+var arr = new Array();
+arr[0] = new thischeck('arr0',3);
+arr[1] = new thischeck('arr1',5);
+arr[2] = new thischeck('arr3',5);
+
+for(var i in arr){
+    console.log(arr[i].age)
+}
