@@ -1,0 +1,23 @@
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
+
+var olderAge = function(p1,p2){
+    if(p1.age > p2.age){
+        return p1.age;
+    }
+    else if(p1.age == p2.age){
+        return p1.age;
+    }
+    else
+    {
+        return p2.age;
+    }
+    
+}
+
+var sam = new Person("samar",1.5);
+var kp = new Person("Kp",29);
+
+console.log("age is greater for " + olderAge(sam,kp));
